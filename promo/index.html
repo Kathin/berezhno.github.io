@@ -37,6 +37,7 @@
     <script src="js/jquery-ui.custom.min.js?937" type="text/javascript"></script>
     <script src="js/library.js?655" type="text/javascript"></script>
 	<script src="js/default.js?696" type="text/javascript"></script>
+    <script src="js/template-min.js?726" type="text/javascript"></script>
 </head>
 
 <body class="tmpl-index itemid-101 lang-ru com-content view-featured layout-none task-none zoo-itemid-0 zoo-categoryid-0 device-ios-no device-android-no device-mobile-no device-table-no">
@@ -295,6 +296,17 @@
             </div>
         </div>
     </div>
+    <div class="container home">
+        <div class="designer-help">
+            <div class="row">
+                <div class="designer-help__title col-lg-4 col-md-4 col-sm-4 col-xs-12 "><i class="far fa-paint-brush col-lg-5"></i><h4 class="col-lg-7">Нужна помощь дизайнера?</h4></div>
+                <div class="designer-help__text col-lg-4 col-md-4 col-sm-4 col-xs-12 ">Вы можете задать вопрос <br>или проконсультироваться с дизайнером<br> о стилях, сочетании цветов, а также оставить <br> заявку на планировку кухни.</div>
+                <div class="designer-help__btn col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                    <div class="btn btn-primary" data-toggle="modal" data-target="#help-popup">ЗАДАТЬ ВОПРОС</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Бестселлеры -->
     <div class="container home">
         <div class="moduletable">
@@ -404,17 +416,27 @@
         </div>
     </div>
     <!-- Контент  -->
-    <div class="container">
-        <div class="row">
-            <main role="main" class="col-sm-12">
-                <!-- show Joomla messages -->
-                <div id="system-message-container">
+    <div class="container home">
+        <div class="moduletable">
+            <div class="weekly">            
+                <h3><a href="#">Интерьер недели</a></h3>
+                <div class="weekly__sale">
+                    <i class="fas fa-certificate"></i>
+                    <span>Скидка 23%</span>
                 </div>
-                <!-- Begin Content -->
-                <div class="blog-featured" itemscope="" itemtype="https://schema.org/Blog">
+                <div class="weekly__about">
+                    Классическая коллекция "Оскар" в итальянском стиле со скидкой 23%!
                 </div>
-                <!-- End Content -->
-            </main>
+                <div class="weekly__image">
+                    <a href="#">
+                        <img src="temp/Clip2net_170606161307.png" alt="">
+                        <div class="weekly__image-title">
+                            <h4>Гостинная "Оскар"</h4>
+                            <span>Цвет: белая эмаль</span>
+                        </div>
+                    </a>    
+                </div>
+            </div>
         </div>
     </div>
     <!-- Верхние баннеры  -->
@@ -666,7 +688,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="rsform form-3d">
-                        <form method="post" id="userForm" action="http://berezhno.pro/">
+                        <form method="get" id="userForm" action="http://berezhno.pro/">
                             <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
                             <fieldset class="form-horizontal formContainer" id="rsform_4_page_0">
                                 <div class="form-group rsform-block rsform-block-name">
@@ -699,35 +721,6 @@
                             <input type="hidden" name="form[sku]" id="sku" value="">
                             <input type="hidden" name="form[formId]" value="4">
                         </form>
-                        <!--script type="text/javascript">
-                        RSFormPro.Ajax.URL = "\/component\/rsform\/?task=ajaxValidate";
-                        </script>
-                        <script type="text/javascript">
-                        rsfp_addEvent(window, 'load', function() {
-                            var form = rsfp_getForm(4);
-                            var submitElement = RSFormPro.getElementByType(4, 'submit');
-                            for (i = 0; i < submitElement.length; i++) {
-                                if (RSFormProUtils.hasClass(submitElement[i], 'rsform-submit-button')) {
-                                    RSFormProUtils.addEvent(submitElement[i], 'click', (function(event) {
-                                        event.preventDefault();
-                                        RSClickedSubmitElement = this;
-                                        for (j = 0; j < submitElement.length; j++) {
-                                            submitElement[j].setAttribute('data-disableonsubmit', '1');
-                                        }
-                                        ajaxValidation(form, undefined, ' has-error');
-                                    }));
-                                }
-                            }
-                        });
-                        </script>
-                        <script type="text/javascript">
-                        ajaxExtraValidationScript[4] = function(task, formId, data) {
-                            var formComponents = {};
-                            formComponents[9] = 'name';
-                            formComponents[11] = 'email';
-                            ajaxDisplayValidationErrors(formComponents, task, formId, data);
-                        };
-                        </script-->
                     </div>
                 </div>
                 <!-- /.modal-content -->
@@ -736,8 +729,60 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->   
+    <div class="modal fade" id="help-popup" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">Консультация дизайнера</h3>
+            </div>
+            <div class="modal-body">
+                <div class="rsform form-designer">                    
+                        <form method="post " action="http://berezhno.pro/ " id="designer" class="input-form js-submit-form designer" name="designer" data-validate="true" novalidate="novalidate">
+                            <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
+                            <fieldset class="form-horizontal formContainer " id="rsform_4_page_0 ">
+                                <div class="form-group rsform-block rsform-block-name ">
+                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="comment">Что вы хотите спросить?</label>
+                                    <div class="col-sm-7 formControls ">
+                                        <textarea name="form[name] " id="comment" class="rsform-input-box form-control rsform-input-box "></textarea>
+                                    </div>
+                                    <div class="col-sm-7 col-md-offset-5 "><span class="formValidation "><span id="component9 " class="formNoError ">Неверный ввод</span></span>
+                                    </div>
+                                </div>                                       
+                                <div class="form-group rsform-block rsform-block-name ">
+                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="name ">Как вас зовут?</label>
+                                    <div class="col-sm-7 formControls ">
+                                        <input type="text " value=" " size="20 " placeholder="Введите ваше имя " name="form[name] " id="name " class="rsform-input-box form-control rsform-input-box ">
+                                    </div>
+                                    <div class="col-sm-7 col-md-offset-5 "><span class="formValidation "><span id="component9 " class="formNoError ">Неверный ввод</span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group rsform-block rsform-block-email ">
+                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="email ">Ваш емайл<strong class="formRequired ">*</strong></label>
+                                    <div class="col-sm-7 formControls ">
+                                        <input type="email " value=" " size="20 " placeholder="Ваш емайл " name="form[email] " id="email " class="rsform-input-box form-control rsform-input-box ">
+                                    </div>
+                                    <div class="col-sm-7 col-md-offset-5 "><span class="formValidation "><span id="component11 " class="formNoError ">Вы забыли ввести Ваш емайл</span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group rsform-block rsform-block-submit ">
+                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="submit "></label>
+                                    <div class="col-sm-7 formControls ">
+                                        <button type="submit " name="form[submit] " id="submit " class="btn btn-block btn-lg btn-primary rsform-submit-button btn btn-primary ">Отправить</button>
+                                    </div>
+                                    <div class="col-sm-7 col-md-offset-53 "><span class="formValidation "></span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 </body>
 
 </html>
-
-    <script src="js/template-min.js?726" type="text/javascript"></script>
