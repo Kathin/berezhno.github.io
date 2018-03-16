@@ -6944,7 +6944,7 @@ button.close {
         }
     }
 }
-.bottom-box {
+.bottom-box, .top-box, .center-box {
     .row {
         >div {
             overflow: hidden;
@@ -6953,6 +6953,9 @@ button.close {
     img {
         transition: all .8s ease;
         background-size: cover;
+        @media (max-width: 767px){
+            width: 100%;
+        }
     }
     a {
         &:hover {
@@ -7011,146 +7014,14 @@ button.close {
             text-decoration: underline;
         }
     }
+}
+.bottom-box {
     margin-top: 25px;
     margin-bottom: 15px;
 }
 .center-box {
-    .row {
-        >div {
-            overflow: hidden;
-        }
-    }
-    img {
-        transition: all .8s ease;
-        background-size: cover;
-    }
-    a {
-        &:hover {
-            img {
-                opacity: .6;
-            }
-        }
-    }
-    span {
-        padding: 0 15px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-    }
-    h3 {
-        font-size: 28px;
-        line-height: 34px;
-        padding: 10px 20px;
-        margin: 0;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: "Times New Roman", Times, serif;
-        background: url(../img/ban-text1-bg.png) left top repeat;
-        text-align: center;
-    }
-    p {
-        margin: 0;
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 19px;
-        color: #000;
-        padding: 15px 20px 5px;
-        background: url(../img/ban-text2-bg.png) left top repeat;
-        a {
-            padding: 5px 20px 15px;
-            display: block;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            color: #000;
-            font-family: "Times New Roman", Times, serif;
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-        &:last-child {
-            padding: 5px 20px 15px;
-            display: block;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            color: #000;
-            font-family: "Times New Roman", Times, serif;
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-    }
     margin-top: 25px;
     margin-bottom: 5px;
-}
-.top-box {
-    .row {
-        >div {
-            overflow: hidden;
-        }
-    }
-    img {
-        transition: all .8s ease;
-        background-size: cover;
-    }
-    a {
-        &:hover {
-            img {
-                opacity: .6;
-            }
-        }
-    }
-    span {
-        padding: 0 15px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-    }
-    h3 {
-        font-size: 28px;
-        line-height: 34px;
-        padding: 10px 20px;
-        margin: 0;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: "Times New Roman", Times, serif;
-        background: url(../img/ban-text1-bg.png) left top repeat;
-        text-align: center;
-    }
-    p {
-        margin: 0;
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 19px;
-        color: #000;
-        padding: 15px 20px 5px;
-        background: url(../img/ban-text2-bg.png) left top repeat;
-        a {
-            padding: 5px 20px 15px;
-            display: block;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            color: #000;
-            font-family: "Times New Roman", Times, serif;
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-        &:last-child {
-            padding: 5px 20px 15px;
-            display: block;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            color: #000;
-            font-family: "Times New Roman", Times, serif;
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-    }
 }
 .home {
     h3 {
@@ -7998,6 +7869,15 @@ button.close {
         .last {
             margin-left: 0;
             margin-right: 0;
+        }
+    }
+    .top-box, .center-box, .bottom-box{
+        h3 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        p{
+            line-height: 16px;
         }
     }
 }
@@ -8916,17 +8796,20 @@ button.close {
     height: 0;
     display: block;
     z-index: 1;
+    @media (max-width: 767px){
+        display: none;
+    }
     .owl-prev{
         position: absolute;
         display: inline-block;
-        left: -30px;
+        left: -22px;
         font-size: 38px;
         line-height: 38px;
     }
     .owl-next{
         position: absolute;
         display: inline-block;
-        right: -30px;
+        right: -22px;
         font-size: 38px;
         line-height: 38px;
     }
@@ -8992,7 +8875,13 @@ button.close {
     padding-top: 25px;
     padding-bottom: 25px;
     margin: 20px 0;
-    text-align: center;
+    text-align: center; 
+    position: relative;
+    height: 224px;       
+    @media (max-width: 767px){
+        height: auto;
+        padding: 0;
+    }
     &__title{
         margin: 0;
         text-transform: uppercase;
@@ -9000,7 +8889,18 @@ button.close {
         font-size: 20px;
         line-height: 40px;
         font-family: "Playfair Display", serif;
-        padding: 21px 0;
+        padding: 21px 0;        
+       position: relative;
+       top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        @media (max-width: 767px){
+            top: auto;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+        }
         h4{
             display: inline-block;
             text-align: left;
@@ -9010,13 +8910,39 @@ button.close {
     }
     &__text {
         border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        font-size: 16px;
-        font-family: "Playfair Display", serif;
-        line-height: 24px;
+        border-right: 1px solid #ccc;     
+        height: 168px;
+        vertical-align: middle;
+        line-height: 168px;
+        @media (max-width: 767px){
+            height: auto;
+            line-height: normal;
+            border: none;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        span{
+            font-family: "Playfair Display", serif;   
+            line-height: 24px;            
+            font-size: 16px;
+            vertical-align: middle;
+            display: inline-block;
+        }
     }
     &__btn{
        padding: 30px 0; 
+       position: relative;
+       top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        @media (max-width: 767px){
+            top: auto;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+        }
        .btn{
             width: 220px;
        }
@@ -9028,6 +8954,101 @@ button.close {
         text-align: right;
         line-height: 54px;
         vertical-align: middle;
+    }
+}
+
+.weekly{
+    position: relative;
+    &__sale{
+        position: absolute;
+        text-align: center;
+        right: -19px;
+        top:-19px;
+        width: 120px;
+        z-index: 2;
+        @media (max-width: 767px){
+            width: 82px;
+            right: -13px;
+            top:-13px;
+        }
+        .fas{
+            font-family: "FontAwesome", serif;
+            font-size: 140px; 
+            line-height: 120px;
+            font-style: normal;
+            position: absolute;
+            top: 0;
+            left:0;    
+            text-shadow: 0px 0px 2px #fff; 
+            @media (max-width: 767px){
+                font-size: 95px; 
+                line-height: 82px;
+            }       
+        }
+        span{
+            position: absolute;
+            top: 0;
+            left:0;
+            color:#fff;
+            font-size: 18px;
+            line-height: 20px;            
+            padding: 40px 31px;   
+            font-family: "Playfair Display",serif;  
+            @media (max-width: 767px){
+                font-size: 14px;
+                line-height: 16px;  
+                padding: 23px 16px;  
+            }       
+        }
+    }
+    &__about{
+        font-size: 16px;
+        font-family: "Playfair Display",serif;
+        line-height: 24px;
+        padding-bottom: 20px;
+    }
+    &__image{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        //overflow: hidden;
+        img{
+            width: 100%;
+        }
+        &-title{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @media (max-width: 767px){
+              position: relative;  
+            }
+            h4{
+                font-size: 28px;
+                line-height: 34px;
+                padding: 10px 20px;
+                margin: 0;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: "Times New Roman",Times,serif;
+                background: url(../img/ban-text1-bg.png) left top repeat;
+                text-align: left;
+                display: block;
+            }
+            span{
+                margin: 0;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 19px;
+                color: #000;
+                padding: 15px 20px;
+                background: url(../img/ban-text2-bg.png) left top repeat;
+                display: block;
+            }
+        }
+    }
+    &:hover img {
+        opacity: 0.8;
+        filter: alpha(opacity= 80 );
     }
 }
     
