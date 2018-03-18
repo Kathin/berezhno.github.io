@@ -176,14 +176,27 @@ jQuery(function($) {
 
 jQuery(document).ready(function($) {
     jQuery('#sku').val(jQuery('.jbprice-sku').html());
-
-$('.navbar').sticky({
-    topSpacing: 0,
-    zIndex: 9,
-    className: 'border',
-    wrapperClassName: 'sticky',
-});
-
+    window.addEventListener('resize', function() {
+        if ($( window ).width() > 767) {
+            if ($('header>.container').find('.navbar').length){
+                //$('.navbar').detach();
+                $('header').append($('.navbar'));
+            }           
+            $('.navbar').sticky({
+                topSpacing: 0,
+                zIndex: 9,
+                className: 'border',
+                wrapperClassName: 'sticky',
+            });
+        } else {
+            $('.navbar').removeAttr('style');
+            if ($('.navbar').parent().is('.sticky')){    
+               $('.navbar').unwrap();
+            }
+            $('.navbar').insertAfter($('.logo'));
+        }
+    }, false);
+    
 });
 
 
