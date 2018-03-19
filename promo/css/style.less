@@ -5381,6 +5381,9 @@ textarea.input-group-sm {
                 border: 0;
                 border-top: 3px solid #000;
                 font-size: 0;
+                @media (max-width: 767px){
+                   min-width: auto; 
+                }
                 li {
                     background: 0 0;
                     display: inline-block;
@@ -5410,8 +5413,11 @@ textarea.input-group-sm {
             }
         }
         li.dropdown {
-            &:hover {
+            &:hover, &.open  {
                 background: #333;
+                > a{
+                   background: #333;
+                }
             }
         }
         li.open {
