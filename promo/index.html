@@ -4,7 +4,7 @@
 <!--[if IE 8]><html lang="ru" class="ie8 no-js undefined-layout" style="visibility: hidden;"><![endif]-->
 <!--[if IE 9]><html lang="ru" class="ie9 no-js undefined-layout" style="visibility: hidden;"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="ru" class="no-js" style="/*visibility: hidden;*/">
+<html lang="ru"">
 <!--<![endif]-->
 
 <head>
@@ -18,15 +18,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <title>Интернет-магазин - Berezhno</title>
     <link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-    <link href="css/style.css?2" rel="stylesheet" type="text/css" media="all">
     <link href="css/front.css" rel="stylesheet" type="text/css">
     <link href="css/module_default.css?v=2" rel="stylesheet" type="text/css">
     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="css/jquery-ui.custom.css?937" rel="stylesheet" type="text/css">
     <link href="css/library.css?667" rel="stylesheet" type="text/css">
 	<link href="css/default.css?679" rel="stylesheet" type="text/css">	
+    <link href="css/style.css?2" rel="stylesheet" type="text/css" media="all">
     <script src="https://use.fontawesome.com/11294ddcf0.js"></script>
     <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/isMobile.min.js" type="text/javascript"></script>
     <!--script src="js/jquery-noconflict.js" type="text/javascript"></script-->
     <!--script src="js/jquery-migrate.min.js" type="text/javascript"></script-->
     <script src="js/bootstrap-min.js?178" type="text/javascript"></script>
@@ -37,6 +38,7 @@
     <script src="js/jquery-ui.custom.min.js?937" type="text/javascript"></script>
     <script src="js/library.js?655" type="text/javascript"></script>
 	<script src="js/default.js?696" type="text/javascript"></script>
+    <script src="js/modal.min.js" type="text/javascript"></script>
     <script src="js/template-min.js?726" type="text/javascript"></script>
 </head>
 
@@ -52,51 +54,7 @@
                         <p>BEREZHNO</p>
                         <p>PRO МЕБЕЛЬ. PROФЕССИОНАЛЬНО</p>
                     </a>
-                </div>
-                <!-- Категории для touch-устройств -->
-                <!--nav class="navbar navbar-default col-sm-12 col-md-12 col-lg-12">
-                     < Brand and toggle get grouped for better mobile display >
-                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                           <span class="sr-only">Toggle navigation</span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                        </button>
-                     </div>
-                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav nav-justified ">
-                            <li class="item-221 current active dropdown parent">
-                                <a href="/vsya-mebel">Вся мебель</a>
-                                <ul class="dropdown-menu">
-                                    <li class="item-226"><a href="/vsya-mebel/shkafy-dlya-odezhdy">Шкафы для одежды</a></li>
-                                    <li class="item-224"><a href="/vsya-mebel/komody">Комоды</a></li>
-                                    <li class="item-228"><a href="/vsya-mebel/biblioteki">Библиотеки</a></li>
-                                    <li class="item-227"><a href="/vsya-mebel/konsoli">Консоли</a></li>
-                                    <li class="item-229"><a href="/vsya-mebel/bufety">Буфеты</a></li>
-                                    <li class="item-222"><a href="/vsya-mebel/tv-tumby">ТВ-тумбы</a></li>
-                                    <li class="item-231"><a href="/vsya-mebel/krovati">Кровати</a></li>
-                                    <li class="item-233"><a href="/vsya-mebel/prikrovatnye-tumby">Прикроватные тумбы</a></li>
-                                    <li class="item-232"><a href="/vsya-mebel/kukhonnye-garnitury">Кухонные гарнитуры</a></li>
-                                    <li class="item-234"><a href="/vsya-mebel/zerkala">Зеркала</a></li>
-                                    <li class="item-235"><a href="/vsya-mebel/stel">Стеллажи</a></li>
-                                    <li class="item-236"><a href="/vsya-mebel/polki">Полки</a></li>
-                                    <li class="item-237"><a href="/vsya-mebel/stoly-obedennye">Столы обеденные</a></li>
-                                    <li class="item-238"><a href="/vsya-mebel/stoly-pismennye">Столы письменные</a></li>
-                                    <li class="item-239"><a href="/vsya-mebel/stoly-zhurnalnye">Столы журнальные </a></li>
-                                    <li class="item-240"><a href="/vsya-mebel/stoly-tualetnye">Столы туалетные</a></li>
-                                    <li class="item-241"><a href="/vsya-mebel/stulya">Стулья</a></li>
-                                    <li class="item-242"><a href="/vsya-mebel/divany">Диваны</a></li>
-                                    <li class="item-243"><a href="/vsya-mebel/kresla">Кресла</a></li>
-                                    <li class="item-246"><a href="/vsya-mebel/servant">Серванты</a></li>
-                                </ul>
-                            </li>
-                            <li class="item-112"><a href="/gostinaya">Классика</a></li>
-                            <li class="item-113"><a href="/kukhni">Лофт</a></li>
-                            <li class="item-230"><a href="/detskaya">Акции</a></li>
-                        </ul>
-                    </div>
-                    </nav-->
+                </div>                
                 <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9 right border">
                     <div class="row first hidden-xs">
                         <div class="col-sm-12">
@@ -128,7 +86,7 @@
 							</a>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-3 col-lg-1 custom-icon-3d right">
-                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                            <button type="button" class="btn btn-link js-modal" data-toggle="modal" data-url="modal/3d.html">
                                 <img src="img/3d_48px.svg" height="34">
                             </button>
                         </div>
@@ -137,7 +95,7 @@
             </div>
         </div>
         <!-- Категории для десктопа -->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default col-sm-12 col-md-12 col-lg-12">
             <div class="container">
                 <!--- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -150,8 +108,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav nav-justified ">
-                        <li class="item-221 dropdown parent"><a href="/vsya-mebel">Вся мебель</a>
-                            <ul class="dropdown-menu">
+                        <li class="item-221 dropdown parent"><a href="/vsya-mebel" class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">Вся мебель</a>
+                            <ul class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenu2">
                                 <li class="item-226"><a href="/vsya-mebel/shkafy-dlya-odezhdy">Шкафы для одежды</a></li>
                                 <li class="item-224"><a href="/vsya-mebel/komody">Комоды</a></li>
                                 <li class="item-228"><a href="/vsya-mebel/biblioteki">Библиотеки</a></li>
@@ -345,7 +303,7 @@
             <div class="designer-help__title col-lg-4 col-md-4 col-sm-4 col-xs-12 "><i class="far fa-paint-brush col-sm-5"></i><h4 class="col-sm-7">Нужна помощь дизайнера?</h4></div>
             <div class="designer-help__text col-lg-4 col-md-4 col-sm-4 col-xs-12 "><span>Вы можете задать вопрос <br>или проконсультироваться с дизайнером<br> о стилях, сочетании цветов, а также оставить <br> заявку на планировку кухни.</span></div>
             <div class="designer-help__btn col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
-                <div class="btn btn-primary" data-toggle="modal" data-target="#help-popup">ЗАДАТЬ ВОПРОС</div>
+                <div class="btn btn-primary js-modal" data-toggle="modal" data-url="modal/ask.html">ЗАДАТЬ ВОПРОС</div>
             </div>
         </div>
     </div>
@@ -518,7 +476,7 @@
     <div class="container home">
         <div class="moduletable">
             <h3><a href="#">Акции</a></h3>
-            <div id="jbmodule-bootstrap-118" class="jbzoo yoo-zoo">
+            <div class="jbzoo yoo-zoo">
                 <div class="module-items owl-carousel owl-loaded jbzoo-no-border module-items-col-0">
                     <div class="wrapper-item-desc">
 				        <div class="item-image align-center">
@@ -610,6 +568,114 @@
 				            <div class="jbprice">
 				                <!-- render element -->
 				                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="355" data-value="65000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">65 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф-купе глянцевый с матовыми зеркалами" href="#">Шкаф-купе глянцевый с матовыми зеркалами</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Проекты и цены -->
+    <div class="container home">
+        <div class="moduletable">
+            <h3><a href="#">Проекты и цены</a></h3>
+            <div class="jbzoo yoo-zoo">
+                <div class="module-items owl-carousel owl-loaded jbzoo-no-border module-items-col-0">
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" href="#">
+                                <img class="img-responsive jbimage" alt="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" src="temp/ber_020_de86218cf30fe1ca618de24d657b34e3.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="217" data-value="74000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+                                    <span class="jbcurrency-value">74 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                  
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" href="#">Шкаф из МДФ распашной с механизмом "push open"</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Прикроватные шкафы из МДФ" href="#" >
+                                <img class="img-responsive" alt="Прикроватные шкафы из МДФ" title="Прикроватные шкафы из МДФ" src="temp/kras12795_kopiya_d9b59101feaab7b7f642299ca951a40b.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="280" data-value="45700" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">45 700</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Прикроватные шкафы из МДФ" href="#">Прикроватные шкафы из МДФ</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Книжный шкаф с антресолью и сундук для хранения" href="#"><img class="img-responsive" alt="Книжный шкаф с антресолью и сундук для хранения" title="Книжный шкаф с антресолью и сундук для хранения" src="temp/kras12778_1_kopiya_ddf1cd678842715697b00a31605a04b5.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="295" data-value="102500" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">102 500</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Книжный шкаф с антресолью и сундук для хранения " href="#">Книжный шкаф с антресолью и сундук для хранения </a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф-купе из крашеного МДФ с зеркальными вставками" href="http://berezhno.pro/mebel-na-zakaz/shkaf-kupe-iz-krashenogo-mdf-s-zerkalnymi-vstavkami"><img class="img-responsive" alt="Шкаф-купе из крашеного МДФ с зеркальными вставками" title="Шкаф-купе из крашеного МДФ с зеркальными вставками" src="temp/ber_021_84d6e88ef7e3113621f183431d43bc4a.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="325" data-value="60000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">60 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                   
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф-купе из крашеного МДФ с зеркальными вставками" href="#">Шкаф-купе из крашеного МДФ с зеркальными вставками</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф-купе из матового МДФ с зеркальными вставками" href="#"><img class="img-responsive" alt="Шкаф-купе из матового МДФ с зеркальными вставками" title="Шкаф-купе из матового МДФ с зеркальными вставками" src="temp/ber_022_7da2cd4c064bcf8ba6354f08ddf2ac96.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="340" data-value="68000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">68 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф-купе из матового МДФ с зеркальными вставками" href="#">Шкаф-купе из матового МДФ с зеркальными вставками</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф-купе глянцевый с матовыми зеркалами" href="#"><img class="img-responsive alt="Шкаф-купе глянцевый с матовыми зеркалами" title="Шкаф-купе глянцевый с матовыми зеркалами" src="temp/ber_023_abb6385e396cc60d27bcbdc651218285.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
                                     <span class="jbprice-value-total"><span data-moneyid="355" data-value="65000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
 <span class="jbcurrency-value">65 000</span> <span class="jbcurrency-symbol">руб.</span></span>
                                     </span>
@@ -721,110 +787,6 @@
             </div>
         </div>
     </footer>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h3 class="modal-title">Запрос на 3Д модель</h3>
-                </div>
-                <div class="modal-body">
-                    <div class="rsform form-3d">
-                        <form method="get" id="userForm" action="http://berezhno.pro/">
-                            <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
-                            <fieldset class="form-horizontal formContainer" id="rsform_4_page_0">
-                                <div class="form-group rsform-block rsform-block-name">
-                                    <label class="col-sm-5 control-label formControlLabel" data-toggle="tooltip" title="" for="name">Как вас зовут?</label>
-                                    <div class="col-sm-7 formControls">
-                                        <input type="text" value="" size="20" placeholder="Введите ваше имя" name="form[name]" id="name" class="rsform-input-box form-control rsform-input-box">
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5"><span class="formValidation"><span id="component9" class="formNoError">Неверный ввод</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group rsform-block rsform-block-email">
-                                    <label class="col-sm-5 control-label formControlLabel" data-toggle="tooltip" title="" for="email">Куда отправлять?<strong class="formRequired">*</strong></label>
-                                    <div class="col-sm-7 formControls">
-                                        <input type="email" value="" size="20" placeholder="Ваш емайл" name="form[email]" id="email" class="rsform-input-box form-control rsform-input-box">
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5"><span class="formValidation"><span id="component11" class="formNoError">Вы забыли ввести Ваш емайл</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group rsform-block rsform-block-submit">
-                                    <label class="col-sm-5 control-label formControlLabel" data-toggle="tooltip" title="" for="submit"></label>
-                                    <div class="col-sm-7 formControls">
-                                        <button type="submit" name="form[submit]" id="submit" class="btn btn-block btn-lg btn-primary rsform-submit-button  btn btn-primary">Запросить</button>
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-53"><span class="formValidation"></span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <input type="hidden" name="form[title]" id="title" value="Интернет-магазин - Berezhno">
-                            <input type="hidden" name="form[url]" id="url" value="berezhno.pro/">
-                            <input type="hidden" name="form[sku]" id="sku" value="">
-                            <input type="hidden" name="form[formId]" value="4">
-                        </form>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->   
-    <div class="modal fade" id="help-popup" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h3 class="modal-title">Консультация дизайнера</h3>
-            </div>
-            <div class="modal-body">
-                <div class="rsform form-designer">                    
-                        <form method="post " action="http://berezhno.pro/ " id="designer" class="input-form js-submit-form designer" name="designer" data-validate="true" novalidate="novalidate">
-                            <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
-                            <fieldset class="form-horizontal formContainer " id="rsform_4_page_0 ">
-                                <div class="form-group rsform-block rsform-block-name ">
-                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="comment">Что вы хотите спросить?</label>
-                                    <div class="col-sm-7 formControls ">
-                                        <textarea name="form[name] " id="comment" class="rsform-input-box form-control rsform-input-box "></textarea>
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5 "><span class="formValidation "><span id="component9 " class="formNoError ">Неверный ввод</span></span>
-                                    </div>
-                                </div>                                       
-                                <div class="form-group rsform-block rsform-block-name ">
-                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="name ">Как вас зовут?</label>
-                                    <div class="col-sm-7 formControls ">
-                                        <input type="text " value=" " size="20 " placeholder="Введите ваше имя " name="form[name] " id="name " class="rsform-input-box form-control rsform-input-box ">
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5 "><span class="formValidation "><span id="component9 " class="formNoError ">Неверный ввод</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group rsform-block rsform-block-email ">
-                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="email ">Ваш емайл<strong class="formRequired ">*</strong></label>
-                                    <div class="col-sm-7 formControls ">
-                                        <input type="email " value=" " size="20 " placeholder="Ваш емайл " name="form[email] " id="email " class="rsform-input-box form-control rsform-input-box ">
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5 "><span class="formValidation "><span id="component11 " class="formNoError ">Вы забыли ввести Ваш емайл</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group rsform-block rsform-block-submit ">
-                                    <label class="col-sm-5 control-label formControlLabel " data-toggle="tooltip " title=" " for="submit "></label>
-                                    <div class="col-sm-7 formControls ">
-                                        <button type="submit " name="form[submit] " id="submit " class="btn btn-block btn-lg btn-primary rsform-submit-button btn btn-primary ">Отправить</button>
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-53 "><span class="formValidation "></span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <!--[if IE 8]><html lang="ru" class="ie8 no-js undefined-layout" style="visibility: hidden;"><![endif]-->
 <!--[if IE 9]><html lang="ru" class="ie9 no-js undefined-layout" style="visibility: hidden;"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="ru" class="no-js" style="/*visibility: hidden;*/">
+<html lang="ru"">
 <!--<![endif]-->
 
 <head>
@@ -18,86 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <title>Интернет-магазин - Berezhno</title>
     <link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-    <link href="css/style.css?2" rel="stylesheet" type="text/css" media="all">
-    <link href="css/front.css" rel="stylesheet" type="text/css">
-    <link href="css/module_default.css?v=2" rel="stylesheet" type="text/css">
-    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link href="css/jquery-ui.custom.css?937" rel="stylesheet" type="text/css">
-    <link href="css/library.css?667" rel="stylesheet" type="text/css">
-	<link href="css/default.css?679" rel="stylesheet" type="text/css">	
+    <link href="css/styles.min.css?2" rel="stylesheet" type="text/css" media="all">    
     <script src="https://use.fontawesome.com/11294ddcf0.js"></script>
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery-noconflict.js" type="text/javascript"></script>
-    <script src="js/jquery-migrate.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap-min.js?178" type="text/javascript"></script>
-    <script src="js/template-min.js?726" type="text/javascript"></script>
-    <script src="js/jquery.sticky.js?720" type="text/javascript"></script>
-    <script src="js/script.js" type="text/javascript"></script>
-    <script src="js/acymailing_module.js?v=570" type="text/javascript" async="async"></script>
-    <script src="js/owl.carousel-min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui.custom.min.js?937" type="text/javascript"></script>
-    <script src="js/library.js?655" type="text/javascript"></script>
-	<script src="js/default.js?696" type="text/javascript"></script>
-    <script type="text/javascript">
-    if (typeof acymailing == 'undefined') {
-        var acymailing = Array();
-    }
-    acymailing['NAMECAPTION'] = 'Имя';
-    acymailing['NAME_MISSING'] = 'Пожалуйста, введите свое имя';
-    acymailing['EMAILCAPTION'] = 'Введите ваш адрес e-mail';
-    acymailing['VALID_EMAIL'] = 'Пожалуйста, введите корректный эл. адрес';
-    acymailing['ACCEPT_TERMS'] = 'Пожалуйста, ознакомьтесь с \'Условиями и положениями\'';
-    acymailing['CAPTCHA_MISSING'] = 'Пожалуйста, введите защитный код, отображаемый на картинке';
-    acymailing['NO_LIST_SELECTED'] = 'Пожалуйста, выберите рассылки, на которые вы хотите подписаться';
-
-    JBZoo.DEBUG = 0;
-    jQuery.migrateMute = false;
-
-    JBZoo.addVar("currencyList", { "default_cur": { "code": "default_cur", "value": 1, "name": "\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e", "format": { "symbol": "", "round_type": "none", "round_value": "2", "num_decimals": "2", "decimal_sep": ".", "thousands_sep": " ", "format_positive": "%v%s", "format_negative": "-%v%s" } }, "%": { "code": "%", "value": 1, "name": "\u041f\u0440\u043e\u0446\u0435\u043d\u0442\u044b", "format": { "symbol": "%", "round_type": "none", "round_value": "2", "num_decimals": "2", "decimal_sep": ".", "thousands_sep": " ", "format_positive": "%v%s", "format_negative": "-%v%s" } }, "rub": { "code": "rub", "value": 69.7972, "name": "\u0420\u0443\u0431\u043b\u044c \u0420\u0424", "format": { "symbol": "\u0440\u0443\u0431.", "round_type": "none", "round_value": 2, "num_decimals": 0, "decimal_sep": ".", "thousands_sep": " ", "format_positive": "%v %s", "format_negative": "-%v %s" } }, "eur": { "code": "default_cur", "value": 1, "name": "\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e", "format": { "symbol": "", "round_type": "none", "round_value": "2", "num_decimals": "2", "decimal_sep": ".", "thousands_sep": " ", "format_positive": "%v%s", "format_negative": "-%v%s" } } });
-
-    JBZoo.addVar("cartItems", {});
-
-    JBZoo.addVar("JBZOO_DIALOGBOX_OK", "Ok");
-
-    JBZoo.addVar("JBZOO_DIALOGBOX_CANCEL", "Cancel");
-
-    jQuery(function($) { $(".jbzoo .jsGoto").JBZooGoto({}, 0); });
-
-    jQuery(function($) { $(".jbzoo select").JBZooSelect({}, 0); });
-
-    jQuery(function($) { $("#jbmodule-bootstrap-118").JBZooHeightFix({}, 0); });
-
-    jQuery(function($) { $("[data-toggle='tooltip']").tooltip({}, 0); });
-
-    jQuery(function($) { $("#jbmodule-bootstrap-117").JBZooHeightFix({}, 0); });
-
-    jQuery(function($) { $("#jbmodule-bootstrap-116").JBZooHeightFix({}, 0); });
-
-    jQuery(function($) { $("#jbmodule-default-92").JBZooCartModule({ "url_clean": "http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=clear", "url_reload": "http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=reloadModule&moduleId=92", "url_item_remove": "http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=delete", "text_delete_confirm": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u0442\u043e\u0432\u0430\u0440 \u0438\u0437 \u043a\u043e\u0440\u0437\u0438\u043d\u044b?", "text_empty_confirm": "\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443?" }, 0); });
-    </script>    
-    <script>
-    jQuery(document).ready(function($) {
-        jQuery('#sku').val(jQuery('.jbprice-sku').html());
-    });
-    </script>
-    <script>
-    if (typeof jQuery != "undefined") jQuery(function($) {
-        $('.navbar').sticky({
-            topSpacing: 0,
-            zIndex: 9,
-            className: 'border',
-            wrapperClassName: 'sticky',
-        });
-    });
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/n2-ss-3.css" media="screen, print">
-	<script type="text/javascript">window.nextend={localization:{},deferreds:[],loadScript:function(url){n2jQuery.ready(function(){nextend.deferreds.push(n2.ajax({url:url,dataType:"script",cache:true,error:function(){console.log(arguments)}}))})},ready:function(cb){n2.when.apply(n2,nextend.deferreds).done(function(){cb.call(window,n2)})}};</script><script type="text/javascript" src="js/n2.js"></script>
-	<script type="text/javascript" src="js/nextend-gsap.min.js"></script>
-	<script type="text/javascript" src="js/nextend-frontend.min.js"></script>
-	<script type="text/javascript" src="js/smartslider-frontend.min.js"></script>
-	<script type="text/javascript" src="js/smartslider-simple-type-frontend.min.js"></script>
-	<script type="text/javascript" src="js/n2-ss-3.js"></script>
-	<script type="text/javascript">window.n2jQuery.ready((function($){window.nextend.ready(function(){new NextendSmartSliderSimple('#n2-ss-3',{"admin":false,"isStaticEdited":0,"translate3d":1,"callbacks":"","align":"normal","isDelayed":0,"load":{"fade":1,"scroll":0},"playWhenVisible":1,"responsive":{"desktop":1,"tablet":1,"mobile":1,"onResizeEnabled":true,"type":"auto","downscale":1,"upscale":1,"minimumHeight":0,"maximumHeight":3000,"maximumSlideWidth":3000,"maximumSlideWidthLandscape":3000,"maximumSlideWidthTablet":3000,"maximumSlideWidthTabletLandscape":3000,"maximumSlideWidthMobile":3000,"maximumSlideWidthMobileLandscape":3000,"maximumSlideWidthConstrainHeight":0,"forceFull":0,"constrainRatio":1,"verticalOffsetSelectors":"","focusUser":0,"focusAutoplay":0,"deviceModes":{"desktopPortrait":1,"desktopLandscape":0,"tabletPortrait":1,"tabletLandscape":0,"mobilePortrait":1,"mobileLandscape":0},"normalizedDeviceModes":{"unknownUnknown":["unknown","Unknown"],"desktopPortrait":["desktop","Portrait"],"desktopLandscape":["desktop","Portrait"],"tabletPortrait":["tablet","Portrait"],"tabletLandscape":["tablet","Portrait"],"mobilePortrait":["mobile","Portrait"],"mobileLandscape":["mobile","Portrait"]},"verticalRatioModifiers":{"unknownUnknown":1,"desktopPortrait":1,"desktopLandscape":1,"tabletPortrait":1,"tabletLandscape":1,"mobilePortrait":1,"mobileLandscape":1},"minimumFontSizes":{"desktopPortrait":4,"desktopLandscape":4,"tabletPortrait":4,"tabletLandscape":4,"mobilePortrait":4,"mobileLandscape":4},"ratioToDevice":{"Portrait":{"tablet":0.7,"mobile":0.5},"Landscape":{"tablet":0,"mobile":0}},"sliderWidthToDevice":{"desktopPortrait":1200,"desktopLandscape":1200,"tabletPortrait":840,"tabletLandscape":0,"mobilePortrait":600,"mobileLandscape":0},"basedOn":"combined","tabletPortraitScreenWidth":800,"mobilePortraitScreenWidth":440,"tabletLandscapeScreenWidth":800,"mobileLandscapeScreenWidth":440,"orientationMode":"width_and_height","scrollFix":0,"overflowHiddenPage":0},"controls":{"scroll":0,"drag":1,"touch":"horizontal","keyboard":1,"tilt":0},"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":1,"start":1,"duration":3000,"autoplayToSlide":-1,"autoplayToSlideIndex":-1,"allowReStart":0,"pause":{"click":1,"mouse":"0","mediaStarted":1},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0}},"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"parallax":{"enabled":1,"mobile":0,"is3D":0,"animate":1,"horizontal":"mouse","vertical":"mouse","origin":"slider","scrollmove":"both"},"initCallbacks":[],"bgAnimations":0,"mainanimation":{"type":"horizontal","duration":600,"delay":0,"ease":"easeOutQuad","parallax":1,"shiftedBackgroundAnimation":0},"carousel":1,"dynamicHeight":0});new NextendSmartSliderWidgetBulletTransition("n2-ss-3",{"overlay":false,"area":11,"thumbnails":[],"action":"click","numeric":0})})}));</script><style type="text/css">.fancybox-margin{margin-right:15px;}</style>
+    <script src="js/script.min.js?2" type="text/javascript"></script>
 </head>
 
 <body class="tmpl-index itemid-101 lang-ru com-content view-featured layout-none task-none zoo-itemid-0 zoo-categoryid-0 device-ios-no device-android-no device-mobile-no device-table-no">
@@ -112,7 +35,7 @@
                         <p>BEREZHNO</p>
                         <p>PRO МЕБЕЛЬ. PROФЕССИОНАЛЬНО</p>
                     </a>
-                </div>
+                </div>                
                 <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9 right border">
                     <div class="row first hidden-xs">
                         <div class="col-sm-12">
@@ -144,7 +67,7 @@
 							</a>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-3 col-lg-1 custom-icon-3d right">
-                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                            <button type="button" class="btn btn-link js-modal" data-toggle="modal" data-url="modal/3d.html">
                                 <img src="img/3d_48px.svg" height="34">
                             </button>
                         </div>
@@ -153,9 +76,9 @@
             </div>
         </div>
         <!-- Категории для десктопа -->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default col-sm-12 col-md-12 col-lg-12">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
+                <!--- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -166,8 +89,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav nav-justified ">
-                        <li class="item-221 dropdown parent"><a href="/vsya-mebel">Вся мебель</a>
-                            <ul class="dropdown-menu">
+                        <li class="item-221 dropdown parent"><a href="/vsya-mebel" class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">Вся мебель</a>
+                            <ul class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenu2">
                                 <li class="item-226"><a href="/vsya-mebel/shkafy-dlya-odezhdy">Шкафы для одежды</a></li>
                                 <li class="item-224"><a href="/vsya-mebel/komody">Комоды</a></li>
                                 <li class="item-228"><a href="/vsya-mebel/biblioteki">Библиотеки</a></li>
@@ -201,60 +124,15 @@
     <!-- Слайдер  -->
     <div class="container slider">
         <div>
-            <!-- Nextend Smart Slider 3 #3 - BEGIN -->
-            <div id="n2-ss-3-align" class="n2-ss-align">
-                <div class="n2-padding">
-                    <div id="n2-ss-3" class="n2-ss-slider n2notransition n2-ss-load-fade " data-minfontsizedesktopportrait="4" data-minfontsizedesktoplandscape="4" data-minfontsizetabletportrait="4" data-minfontsizetabletlandscape="4" data-minfontsizemobileportrait="4" data-minfontsizemobilelandscape="4" style="font-size: 16px;" data-fontsize="16">
-                        <div class="n2-ss-slider-1" style="">
-                            <div class="n2-ss-slider-2">
-                                <div class="n2-ss-slider-3" style="">
-                                    <div data-slide-duration="0" data-id="31" class="n2-ss-slide n2-ss-canvas  n2-ss-slide-active n2-ss-slide-31" style="">
-                                        <div data-hash="52885ccc346d5e1e837e290404f996c7" data-desktop="temp/Clip2net_170606170523.png" style="" class="n2-ss-slide-background" data-opacity="1"><img title="" style="opacity:1;" class="n2-ss-slide-background-image n2-ss-slide-stretch n2-ow" data-x="50" data-y="50" src="temp/Clip2net_170606170523.png" alt=""></div>
-                                        <div class="n2-ss-layers-container" style=""></div>
-                                    </div>
-                                    <div data-slide-duration="0" data-id="36" class="n2-ss-slide n2-ss-canvas  n2-ss-slide-36" style="">
-                                        <div data-hash="b855a6f2b61f4f973a58c1fd9bda1adb" data-desktop="temp/Clip2net_1706061719152.png" style="" class="n2-ss-slide-background" data-opacity="1"><img title="" style="opacity:1;" class="n2-ss-slide-background-image n2-ss-slide-stretch n2-ow" data-x="50" data-y="50" src="temp/Clip2net_1706061719152.png" alt=""></div>
-                                        <div class="n2-ss-layers-container" style=""></div>
-                                    </div>
-                                    <div data-slide-duration="0" data-id="29" class="n2-ss-slide n2-ss-canvas  n2-ss-slide-29" style="">
-                                        <div data-hash="1863a3e3dc413b6983b8d56dfc40c77f" data-desktop="temp/Clip2net_1706061605211.png" style="" class="n2-ss-slide-background" data-opacity="1"><img title="" style="opacity:1;" class="n2-ss-slide-background-image n2-ss-slide-stretch n2-ow" data-x="50" data-y="50" src="temp/Clip2net_1706061605211.png" alt=""></div>
-                                        <div class="n2-ss-layers-container" style=""></div>
-                                    </div>
-                                    <div data-slide-duration="0" data-id="30" class="n2-ss-slide n2-ss-canvas  n2-ss-slide-30" style="">
-                                        <div data-hash="32923f8585a1b4527a03342533c39ada" data-desktop="temp/Clip2net_170606161307.png" style="" class="n2-ss-slide-background" data-opacity="1"><img title="" style="opacity:1;" class="n2-ss-slide-background-image n2-ss-slide-stretch n2-ow" data-x="50" data-y="50" src="temp/Clip2net_170606161307.png" alt=""></div>
-                                        <div class="n2-ss-layers-container" style=""></div>
-                                    </div>
-                                    <div data-slide-duration="0" data-id="32" class="n2-ss-slide n2-ss-canvas  n2-ss-slide-32" style="">
-                                        <div data-hash="c48646d13202e30be008cc1e18280098" data-desktop="temp/Clip2net_170606171406.png" style="" class="n2-ss-slide-background" data-opacity="1"><img title="" style="opacity:1;" class="n2-ss-slide-background-image n2-ss-slide-stretch n2-ow" data-x="50" data-y="50" src="temp/Clip2net_170606171406.png" alt=""></div>
-                                        <div class="n2-ss-layers-container" style=""></div>
-                                    </div>
-                                    <div data-slide-duration="0" data-id="35" class="n2-ss-slide n2-ss-canvas  n2-ss-slide-35" style="">
-                                        <div data-hash="d6ac0e1e7710348598d00be7232ce34b" data-desktop="temp/Clip2net_170606172227.png" style="" class="n2-ss-slide-background" data-opacity="1"><img title="" style="opacity:1;" class="n2-ss-slide-background-image n2-ss-slide-stretch n2-ow" data-x="50" data-y="50" src="temp/Clip2net_170606172227.png" alt=""></div>
-                                        <div class="n2-ss-layers-container" style=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-ssright="0+10" data-ssbottom="0+10" data-offset="10" class="n2-ss-widget n2-ss-widget-display-desktop n2-ss-widget-display-tablet n2-ss-widget-display-mobile nextend-bullet-bar n2-ib nextend-bullet-bar-horizontal" style="text-align: center;position: absolute;">
-                            <div class="n2-style-260dae435d54810c015b6ddb22636641-dot n2-active"></div>
-                            <div class="n2-style-260dae435d54810c015b6ddb22636641-dot "></div>
-                            <div class="n2-style-260dae435d54810c015b6ddb22636641-dot "></div>
-                            <div class="n2-style-260dae435d54810c015b6ddb22636641-dot "></div>
-                            <div class="n2-style-260dae435d54810c015b6ddb22636641-dot "></div>
-                            <div class="n2-style-260dae435d54810c015b6ddb22636641-dot "></div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                    <div id="n2-ss-3-spinner">
-                        <div>
-                            <div class="n2-ss-spinner-simple-white-container">
-                                <div class="n2-ss-spinner-simple-white"></div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Nextend Smart Slider 3 #3 - BEGIN -->              
+                <div class="main-slider owl-carousel" style="">
+                        <img title="" src="temp/Clip2net_170606170523.png" alt="">
+                        <img title="" src="temp/Clip2net_1706061719152.png" alt="">
+                        <img title="" src="temp/Clip2net_1706061605211.png" alt="">
+                        <img title="" src="temp/Clip2net_170606161307.png" alt="">
+                        <img title="" src="temp/Clip2net_170606171406.png" alt="">
+                        <img title="" src="temp/Clip2net_170606172227.png" alt="">
                 </div>
-            </div>
-            <div id="n2-ss-3-placeholder" style="position: relative;z-index:2;"><img style="width: 100%; max-width:3000px;" class="n2-ow" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNDUwIiA+PC9zdmc+" alt="Slider"></div>
             <!-- Nextend Smart Slider 3 #3 - END -->
         </div>
     </div>
@@ -298,7 +176,7 @@
         <div class="moduletable">
             <h3><a href="#">Новые поступления</a></h3>
             <div id="jbmodule-bootstrap-116" class="jbzoo yoo-zoo">
-                <div class="module-items owl-carousel owl-loaded jbzoo-no-border module-items-col-0 owl-drag">
+                <div class="module-items owl-carousel jbzoo-no-border module-items-col-0">
 				    <div class="wrapper-item-desc">
 				        <div class="item-image align-center">
 				            <a title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" href="#">
@@ -398,6 +276,15 @@
                         <div class="item-title"> <a title="Шкаф-купе глянцевый с матовыми зеркалами" href="#">Шкаф-купе глянцевый с матовыми зеркалами</a> </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container home">
+        <div class="designer-help row">
+            <div class="designer-help__title col-lg-4 col-md-4 col-sm-4 col-xs-12 "><i class="far fa-paint-brush col-sm-5"></i><h4 class="col-sm-7">Нужна помощь дизайнера?</h4></div>
+            <div class="designer-help__text col-lg-4 col-md-4 col-sm-4 col-xs-12 "><span>Вы можете задать вопрос <br>или проконсультироваться с дизайнером<br> о стилях, сочетании цветов, а также оставить <br> заявку на планировку кухни.</span></div>
+            <div class="designer-help__btn col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                <div class="btn btn-primary js-modal" data-toggle="modal" data-url="modal/ask.html">ЗАДАТЬ ВОПРОС</div>
             </div>
         </div>
     </div>
@@ -510,17 +397,27 @@
         </div>
     </div>
     <!-- Контент  -->
-    <div class="container">
-        <div class="row">
-            <main role="main" class="col-sm-12">
-                <!-- show Joomla messages -->
-                <div id="system-message-container">
+    <div class="container home">
+        <div class="moduletable">
+            <div class="weekly">            
+                <h3><a href="#">Интерьер недели</a></h3>
+                <div class="weekly__about">
+                    Классическая коллекция "Оскар" в итальянском стиле со скидкой 23%!
                 </div>
-                <!-- Begin Content -->
-                <div class="blog-featured" itemscope="" itemtype="https://schema.org/Blog">
+                <div class="weekly__image">                    
+                    <div class="weekly__sale">
+                        <i class="fas fa-certificate"></i>
+                        <span>Скидка 23%</span>
+                    </div>
+                    <a href="#">
+                        <img src="temp/Clip2net_170606161307.png" alt="">
+                        <div class="weekly__image-title">
+                            <h4>Гостинная "Оскар"</h4>
+                            <span>Цвет: белая эмаль</span>
+                        </div>
+                    </a>    
                 </div>
-                <!-- End Content -->
-            </main>
+            </div>
         </div>
     </div>
     <!-- Верхние баннеры  -->
@@ -560,7 +457,7 @@
     <div class="container home">
         <div class="moduletable">
             <h3><a href="#">Акции</a></h3>
-            <div id="jbmodule-bootstrap-118" class="jbzoo yoo-zoo">
+            <div class="jbzoo yoo-zoo">
                 <div class="module-items owl-carousel owl-loaded jbzoo-no-border module-items-col-0">
                     <div class="wrapper-item-desc">
 				        <div class="item-image align-center">
@@ -652,6 +549,114 @@
 				            <div class="jbprice">
 				                <!-- render element -->
 				                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="355" data-value="65000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">65 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф-купе глянцевый с матовыми зеркалами" href="#">Шкаф-купе глянцевый с матовыми зеркалами</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Проекты и цены -->
+    <div class="container home">
+        <div class="moduletable">
+            <h3><a href="#">Проекты и цены</a></h3>
+            <div class="jbzoo yoo-zoo">
+                <div class="module-items owl-carousel owl-loaded jbzoo-no-border module-items-col-0">
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" href="#">
+                                <img class="img-responsive jbimage" alt="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" src="temp/ber_020_de86218cf30fe1ca618de24d657b34e3.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="217" data-value="74000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+                                    <span class="jbcurrency-value">74 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                  
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф из МДФ распашной с механизмом &quot;push open&quot;" href="#">Шкаф из МДФ распашной с механизмом "push open"</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Прикроватные шкафы из МДФ" href="#" >
+                                <img class="img-responsive" alt="Прикроватные шкафы из МДФ" title="Прикроватные шкафы из МДФ" src="temp/kras12795_kopiya_d9b59101feaab7b7f642299ca951a40b.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="280" data-value="45700" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">45 700</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Прикроватные шкафы из МДФ" href="#">Прикроватные шкафы из МДФ</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Книжный шкаф с антресолью и сундук для хранения" href="#"><img class="img-responsive" alt="Книжный шкаф с антресолью и сундук для хранения" title="Книжный шкаф с антресолью и сундук для хранения" src="temp/kras12778_1_kopiya_ddf1cd678842715697b00a31605a04b5.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="295" data-value="102500" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">102 500</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Книжный шкаф с антресолью и сундук для хранения " href="#">Книжный шкаф с антресолью и сундук для хранения </a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф-купе из крашеного МДФ с зеркальными вставками" href="http://berezhno.pro/mebel-na-zakaz/shkaf-kupe-iz-krashenogo-mdf-s-zerkalnymi-vstavkami"><img class="img-responsive" alt="Шкаф-купе из крашеного МДФ с зеркальными вставками" title="Шкаф-купе из крашеного МДФ с зеркальными вставками" src="temp/ber_021_84d6e88ef7e3113621f183431d43bc4a.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="325" data-value="60000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">60 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                   
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф-купе из крашеного МДФ с зеркальными вставками" href="#">Шкаф-купе из крашеного МДФ с зеркальными вставками</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф-купе из матового МДФ с зеркальными вставками" href="#"><img class="img-responsive" alt="Шкаф-купе из матового МДФ с зеркальными вставками" title="Шкаф-купе из матового МДФ с зеркальными вставками" src="temp/ber_022_7da2cd4c064bcf8ba6354f08ddf2ac96.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
+                                    <span class="jbprice-value-total"><span data-moneyid="340" data-value="68000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
+<span class="jbcurrency-value">68 000</span> <span class="jbcurrency-symbol">руб.</span></span>
+                                    </span>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="item-title"> <a title="Шкаф-купе из матового МДФ с зеркальными вставками" href="#">Шкаф-купе из матового МДФ с зеркальными вставками</a> </div>
+                    </div>
+                    <div class="wrapper-item-desc">
+                        <div class="item-image align-center">
+                            <a title="Шкаф-купе глянцевый с матовыми зеркалами" href="#"><img class="img-responsive alt="Шкаф-купе глянцевый с матовыми зеркалами" title="Шкаф-купе глянцевый с матовыми зеркалами" src="temp/ber_023_abb6385e396cc60d27bcbdc651218285.jpg" width="240" height="210"></a>
+                        </div>
+                        <div class="item-price">                                
+                            <div class="jbprice">
+                                <!-- render element -->
+                                <div class="jbprice-value">
                                     <span class="jbprice-value-total"><span data-moneyid="355" data-value="65000" data-currency="rub" data-showplus="0" class="jsMoney jbcartvalue">
 <span class="jbcurrency-value">65 000</span> <span class="jbcurrency-symbol">руб.</span></span>
                                     </span>
@@ -763,85 +768,6 @@
             </div>
         </div>
     </footer>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h3 class="modal-title">Запрос на 3Д модель</h3>
-                </div>
-                <div class="modal-body">
-                    <div class="rsform form-3d">
-                        <form method="post" id="userForm" action="http://berezhno.pro/">
-                            <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
-                            <fieldset class="form-horizontal formContainer" id="rsform_4_page_0">
-                                <div class="form-group rsform-block rsform-block-name">
-                                    <label class="col-sm-5 control-label formControlLabel" data-toggle="tooltip" title="" for="name">Как вас зовут?</label>
-                                    <div class="col-sm-7 formControls">
-                                        <input type="text" value="" size="20" placeholder="Введите ваше имя" name="form[name]" id="name" class="rsform-input-box form-control rsform-input-box">
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5"><span class="formValidation"><span id="component9" class="formNoError">Неверный ввод</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group rsform-block rsform-block-email">
-                                    <label class="col-sm-5 control-label formControlLabel" data-toggle="tooltip" title="" for="email">Куда отправлять?<strong class="formRequired">*</strong></label>
-                                    <div class="col-sm-7 formControls">
-                                        <input type="email" value="" size="20" placeholder="Ваш емайл" name="form[email]" id="email" class="rsform-input-box form-control rsform-input-box">
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-5"><span class="formValidation"><span id="component11" class="formNoError">Вы забыли ввести Ваш емайл</span></span>
-                                    </div>
-                                </div>
-                                <div class="form-group rsform-block rsform-block-submit">
-                                    <label class="col-sm-5 control-label formControlLabel" data-toggle="tooltip" title="" for="submit"></label>
-                                    <div class="col-sm-7 formControls">
-                                        <button type="submit" name="form[submit]" id="submit" class="btn btn-block btn-lg btn-primary rsform-submit-button  btn btn-primary">Запросить</button>
-                                    </div>
-                                    <div class="col-sm-7 col-md-offset-53"><span class="formValidation"></span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <input type="hidden" name="form[title]" id="title" value="Интернет-магазин - Berezhno">
-                            <input type="hidden" name="form[url]" id="url" value="berezhno.pro/">
-                            <input type="hidden" name="form[sku]" id="sku" value="">
-                            <input type="hidden" name="form[formId]" value="4">
-                        </form>
-                        <script type="text/javascript">
-                        RSFormPro.Ajax.URL = "\/component\/rsform\/?task=ajaxValidate";
-                        </script>
-                        <script type="text/javascript">
-                        rsfp_addEvent(window, 'load', function() {
-                            var form = rsfp_getForm(4);
-                            var submitElement = RSFormPro.getElementByType(4, 'submit');
-                            for (i = 0; i < submitElement.length; i++) {
-                                if (RSFormProUtils.hasClass(submitElement[i], 'rsform-submit-button')) {
-                                    RSFormProUtils.addEvent(submitElement[i], 'click', (function(event) {
-                                        event.preventDefault();
-                                        RSClickedSubmitElement = this;
-                                        for (j = 0; j < submitElement.length; j++) {
-                                            submitElement[j].setAttribute('data-disableonsubmit', '1');
-                                        }
-                                        ajaxValidation(form, undefined, ' has-error');
-                                    }));
-                                }
-                            }
-                        });
-                        </script>
-                        <script type="text/javascript">
-                        ajaxExtraValidationScript[4] = function(task, formId, data) {
-                            var formComponents = {};
-                            formComponents[9] = 'name';
-                            formComponents[11] = 'email';
-                            ajaxDisplayValidationErrors(formComponents, task, formId, data);
-                        };
-                        </script>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->   
 </body>
 
 </html>

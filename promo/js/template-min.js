@@ -1,3 +1,4 @@
+document.documentElement.classList.add(isMobile.any ? 'mobile' : 'no-mobile')
 "undefined" != typeof jQuery && jQuery(function($) {
     function o() {
         $(".module-items").owlCarousel({
@@ -176,26 +177,47 @@ jQuery(function($) {
 
 jQuery(document).ready(function($) {
     jQuery('#sku').val(jQuery('.jbprice-sku').html());
+    if ($( window ).width() > 767) {
+        if ($('header>.container').find('.navbar').length){
+            //$('.navbar').detach();
+            $('header').append($('.navbar'));
+        } 
+       $('.navbar').sticky({
+            topSpacing: 0,
+            zIndex: 9,
+            className: 'border',
+            wrapperClassName: 'sticky',
+        }); 
+    } else {
+        $('.navbar').removeAttr('style');
+        if ($('.navbar').parent().is('.sticky')){    
+           $('.navbar').unwrap();
+        }
+        $('.navbar').insertAfter($('.logo'));
+    }
     window.addEventListener('resize', function() {
         if ($( window ).width() > 767) {
             if ($('header>.container').find('.navbar').length){
                 //$('.navbar').detach();
                 $('header').append($('.navbar'));
-            }           
-            $('.navbar').sticky({
-                topSpacing: 0,
-                zIndex: 9,
-                className: 'border',
-                wrapperClassName: 'sticky',
-            });
+            }   
+            if (!($('header').find('.sticky').length)){        
+                $('.navbar').sticky({
+                    topSpacing: 0,
+                    zIndex: 9,
+                    className: 'border',
+                    wrapperClassName: 'sticky',
+                });
+            }
         } else {
-            $('.navbar').removeAttr('style');
+            $('.navbar').removeAttr('style');           
             if ($('.navbar').parent().is('.sticky')){    
                $('.navbar').unwrap();
+               $('.sticky').remove();
             }
             $('.navbar').insertAfter($('.logo'));
         }
-    }, false);
+    }, false); 
     
 });
 

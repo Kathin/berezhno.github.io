@@ -4346,6 +4346,9 @@ tbody.collapse.in {
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     background-clip: padding-box;
+    @media (max-width: 767px){
+        position: relative;
+    }
     .divider {
         height: 1px;
         margin: 8px 0;
@@ -8527,7 +8530,11 @@ button.close {
             li.parent {
                 &:after {
                     right: 10px;
-                    bottom: 6px;
+                    top: 11px;
+                    text-align: center;
+                    width: 20px;
+                    height: 20px;
+                    pointer-events: none;
                 }
             }
             li {
