@@ -174,6 +174,31 @@ jQuery(function($) {
     }, 0);
 });
 
+/*JBZoo.DEBUG = 0;
+jQuery.migrateMute = false;
+
+JBZoo.addVar("currencyList", {"default_cur":{"code":"default_cur","value":1,"name":"\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e","format":{"symbol":"","round_type":"none","round_value":"2","num_decimals":"2","decimal_sep":".","thousands_sep":" ","format_positive":"%v%s","format_negative":"-%v%s"}},"%":{"code":"%","value":1,"name":"\u041f\u0440\u043e\u0446\u0435\u043d\u0442\u044b","format":{"symbol":"%","round_type":"none","round_value":"2","num_decimals":"2","decimal_sep":".","thousands_sep":" ","format_positive":"%v%s","format_negative":"-%v%s"}},"rub":{"code":"rub","value":70.5699,"name":"\u0420\u0443\u0431\u043b\u044c \u0420\u0424","format":{"symbol":"\u0440\u0443\u0431.","round_type":"none","round_value":2,"num_decimals":0,"decimal_sep":".","thousands_sep":" ","format_positive":"%v %s","format_negative":"-%v %s"}},"eur":{"code":"default_cur","value":1,"name":"\u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e","format":{"symbol":"","round_type":"none","round_value":"2","num_decimals":"2","decimal_sep":".","thousands_sep":" ","format_positive":"%v%s","format_negative":"-%v%s"}}} );
+
+JBZoo.addVar("cartItems", {"74":{"f2d59ba5-d57c-493c-a32a-4269e37f2c8b":"f2d59ba5-d57c-493c-a32a-4269e37f2c8b"}} );
+
+JBZoo.addVar("JBZOO_DIALOGBOX_OK", "Ok" );
+
+JBZoo.addVar("JBZOO_DIALOGBOX_CANCEL", "Cancel" );
+
+jQuery(function($){ $(".jbzoo .jsGoto").JBZooGoto({}, 0); });
+
+jQuery(function($){ $(".jbzoo select").JBZooSelect({}, 0); });
+
+jQuery(function($){ $("[data-toggle='tooltip']").tooltip({}, 0); });
+
+
+jQuery(function($){ $("a.jbimage-link[rel=jbimage-popup], a.jbimage-gallery").fancybox({"helpers":{"title":{"type":"outside"},"buttons":{"position":"top"},"thumbs":{"width":80,"height":80},"overlay":{"locked":false}}}, 0); });
+
+
+jQuery(function($){ $("#jbmodule-default-92").JBZooCartModule({"url_clean":"http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=clear","url_reload":"http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=reloadModule&moduleId=92","url_item_remove":"http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=delete","text_delete_confirm":"\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u0442\u043e\u0432\u0430\u0440 \u0438\u0437 \u043a\u043e\u0440\u0437\u0438\u043d\u044b?","text_empty_confirm":"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443?"}, 0); });
+*/
+jQuery(function($){ $(".jbzoo .items, .jbzoo .subcategories, .jbzoo .jbcart-payment").JBZooHeightFix({"element":".item-column"}, 0); });
+    
 
 jQuery(document).ready(function($) {
     jQuery('#sku').val(jQuery('.jbprice-sku').html());
