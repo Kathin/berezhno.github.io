@@ -192,12 +192,12 @@ jQuery(function($){ $(".jbzoo select").JBZooSelect({}, 0); });
 jQuery(function($){ $("[data-toggle='tooltip']").tooltip({}, 0); });
 
 
-jQuery(function($){ $("a.jbimage-link[rel=jbimage-popup], a.jbimage-gallery").fancybox({"helpers":{"title":{"type":"outside"},"buttons":{"position":"top"},"thumbs":{"width":80,"height":80},"overlay":{"locked":false}}}, 0); });
-
 
 jQuery(function($){ $("#jbmodule-default-92").JBZooCartModule({"url_clean":"http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=clear","url_reload":"http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=reloadModule&moduleId=92","url_item_remove":"http:\/\/berezhno.pro\/?option=com_zoo&controller=basket&task=delete","text_delete_confirm":"\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u0442\u043e\u0432\u0430\u0440 \u0438\u0437 \u043a\u043e\u0440\u0437\u0438\u043d\u044b?","text_empty_confirm":"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443?"}, 0); });
 */
 jQuery(function($){ $(".jbzoo .items, .jbzoo .subcategories, .jbzoo .jbcart-payment").JBZooHeightFix({"element":".item-column"}, 0); });
+jQuery(function($){ $("a.jbimage-link[rel=jbimage-popup], a.jbimage-gallery").fancybox({"helpers":{"title":{"type":"outside"},"buttons":{"position":"top"},"thumbs":{"width":80,"height":80},"overlay":{"locked":false}}}, 0); });
+
     
 
 jQuery(document).ready(function($) {
