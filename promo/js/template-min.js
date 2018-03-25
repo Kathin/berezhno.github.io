@@ -267,3 +267,16 @@ ajaxExtraValidationScript[4] = function(task, formId, data) {
     formComponents[11] = 'email';
     ajaxDisplayValidationErrors(formComponents, task, formId, data);
 };
+
+var loading = false;
+$(window).scroll(function(){
+   if((($(window).scrollTop()+$(window).height())+100)>=$(document).height()){
+      if(loading == false){
+         loading = true;
+         $.get($('.jbzoo-view-category').attr('data-resource'), function(loaded){
+            $('.jbzoo-view-category .items .row').append(loaded);
+            loading = false;
+         });
+      }
+   }
+});
