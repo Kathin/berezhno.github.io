@@ -1,7 +1,4 @@
-<?php
-
-
-   echo '<div class="item-column col-md-3">
+<div class="item-column col-md-3">
                                 <div class="jbzoo-item jbzoo-item-tovar jbzoo-item-teaser jbzoo-item-74">
                                     <a class="thumbnail jbimage-link  teaser_74_2677c6d8-dd8e-43b6-a9a8-289e80cd7e49" title="Шкаф распашной. Коллекция &quot;Классика&quot;" href="http://berezhno.pro/vsya-mebel/shkaf-raspashnoj-kollekciya-klassika" id="jbimage-link-5ab36f07863a2"><img class="img-responsive jbimage teaser_74_2677c6d8-dd8e-43b6-a9a8-289e80cd7e49" alt="Шкаф распашной. Коллекция &quot;Классика&quot;" title="Шкаф распашной. Коллекция &quot;Классика&quot;" src="http://berezhno.pro/media/zoo/images/ber_025._4c8d412255c3e569d5403817a11e147d.jpg" width="255" height="260"></a>
 
@@ -264,5 +261,4 @@
                                             </svg><span>Запросить 3Д модель</span></button>
                                     </div>
                                 </div>
-                            </div>';
-?>
+                            </div>
