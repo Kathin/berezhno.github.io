@@ -208,7 +208,7 @@ jQuery(document).ready(function($) {
         } 
        $('.navbar').sticky({
             topSpacing: 0,
-            zIndex: 9,
+            zIndex: 200,
             className: 'border',
             wrapperClassName: 'sticky',
         }); 
@@ -228,7 +228,7 @@ jQuery(document).ready(function($) {
             if (!($('header').find('.sticky').length)){    
                 $('.navbar').sticky({
                     topSpacing: 0,
-                    zIndex: 9,
+                    zIndex: 200,
                     className: 'border',
                     wrapperClassName: 'sticky',
                 });  
