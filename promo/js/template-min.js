@@ -208,7 +208,7 @@ jQuery(document).ready(function($) {
         } 
        $('.navbar').sticky({
             topSpacing: 0,
-            zIndex: 200,
+            zIndex: 300,
             className: 'border',
             wrapperClassName: 'sticky',
         }); 
@@ -228,7 +228,7 @@ jQuery(document).ready(function($) {
             if (!($('header').find('.sticky').length)){    
                 $('.navbar').sticky({
                     topSpacing: 0,
-                    zIndex: 200,
+                    zIndex: 300,
                     className: 'border',
                     wrapperClassName: 'sticky',
                 });  
@@ -270,7 +270,7 @@ ajaxExtraValidationScript[4] = function(task, formId, data) {
 
 var loading = false;
 $(window).scroll(function(){
-   if((($(window).scrollTop()+$(window).height())+100)>=$(document).height()){
+   if(((($(window).scrollTop()+$(window).height())+100)>=$(document).height()) && ($('.jbzoo-view-category').length != 0)){
       if(loading == false){
          loading = true;
          $.get($('.jbzoo-view-category').attr('data-resource'), function(loaded){
@@ -280,3 +280,77 @@ $(window).scroll(function(){
       }
    }
 });
+
+/*Google Map*/
+
+ // The following example creates complex markers to indicate beaches near
+  // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+  // to the base of the flagpole.
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('world-map'), {
+      zoom: 12,
+      center: {lat: 55.6340, lng: 37.4400}
+    });
+
+    setMarkers(map);
+  }
+
+  // Data for the markers consisting of a name, a LatLng and a zIndex for the
+  // order in which these markers should display on top of each other.
+  var beaches = [
+    ['Мебель Park', 55.634027, 37.440074, 1],
+    /*['Coogee Beach', -33.923036, 151.259052, 5],
+    ['Cronulla Beach', -34.028249, 151.157507, 3],
+    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+    ['Maroubra Beach', -33.950198, 151.259302, 1]*/
+  ];
+
+  function setMarkers(map) {
+    // Adds markers to the map.
+
+    // Marker sizes are expressed as a Size of X,Y where the origin of the image
+    // (0,0) is located in the top left of the image.
+
+    // Origins, anchor positions and coordinates of the marker increase in the X
+    // direction to the right and in the Y direction down.
+    var image = {
+      url: '',
+      // This marker is 20 pixels wide by 32 pixels high.
+      size: new google.maps.Size(20, 32),
+      // The origin for this image is (0, 0).
+      origin: new google.maps.Point(0, 0),
+      // The anchor for this image is the base of the flagpole at (0, 32).
+      anchor: new google.maps.Point(0, 32)
+    };
+    // Shapes define the clickable region of the icon. The type defines an HTML
+    // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+    // The final coordinate closes the poly by connecting to the first coordinate.
+    var shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      type: 'poly'
+    };
+    var messages = ['<b>Магазин мебели  BEREZHNO</b><br> корпус А, 2 этаж помещение 239а'/*, 'is', 'the', 'secret', 'message'*/];
+    for (var i = 0; i < beaches.length; i++) {
+      var beach = beaches[i];
+      var marker = new google.maps.Marker({
+        position: {lat: beach[1], lng: beach[2]},
+        map: map,
+        //icon: image,
+        //animation: google.maps.Animation.DROP,
+        //shape: shape,
+        title: beach[0],
+        zIndex: beach[3]
+      });
+      attachMessage(marker,  messages[i]);
+    }
+  }
+
+  function attachMessage(marker, message) {
+    var infowindow = new google.maps.InfoWindow({
+      content: message
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(marker.get('map'), marker);      
+    });
+  }
