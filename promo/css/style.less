@@ -9084,5 +9084,135 @@ button.close {
        
 }
 #world-map{
-    height: 500px;
-}  
+    height: 500px;   
+    width: ~"calc(100% - 30px)"; 
+    padding: 0 15px;
+    margin-left: 15px;
+    .map-popup__link{
+        font-family: "Times New Roman",Times,serif;
+        font-size: 16px;    
+        font-weight: 600;    
+    }
+    .map-popup__list{
+        margin: 5px 0 0;
+        padding: 0;
+        li{
+            display: block;
+            font-size: 14px;
+            line-height: 18px
+        }
+        span + span{
+            padding-left: 4px;
+        }
+        span:first-child {
+            font-weight: 400;
+        }
+    }
+    .gm-style-iw{
+        max-width: 300px;
+    }
+} 
+
+main .item-page .shops{
+    margin-bottom: 20px;
+    padding: 0 15px;
+    &__item{
+        position: relative;
+        transition: all .5s ease;
+        box-shadow: 0 0 10px rgba(0,0,0,0);
+        margin-bottom: 20px;
+        a{
+          color: #333;
+          &:focus{
+            text-decoration: none;
+          }
+        }
+        &:hover, &:focus{
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            text-decoration: none;
+            img {
+                opacity: .6;
+            }
+            h3{
+                text-decoration: underline;
+            }
+            a{
+               text-decoration: none; 
+               color: #333;
+            }
+        }
+        &-header{
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            width: ~"calc(100% + 30px)";
+            margin-left: -15px;
+            background: rgba(0,0,0,0.1);
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                transition: all .5s ease;
+                opacity: 1;
+                width: 100%;
+            }
+            h3{
+              position: absolute;                
+              font-size: 28px;
+              line-height: 34px;
+              padding: 10px 20px;
+              margin: 0;
+              color: #fff;
+              text-transform: uppercase;
+              font-family: "Times New Roman", Times, serif;
+              text-shadow: 0 0 5px rgba(0,0,0,0.8);
+              background: url(../img/ban-text1-bg.png) left top repeat;
+              text-align: center;
+              font-weight: normal;
+              width: 100%;
+              bottom: 0;
+              vertical-align: middle;
+              min-height: 68px;
+              @media (min-width:768px) {
+                font-size: 20px;
+                line-height: 24px;
+              }
+              @media (max-width:767px) {
+                font-size: 22px;
+                line-height: 26px;
+              }
+            }
+
+        }
+        &-list{
+            height: 200px; 
+            padding: 10px 0;
+            cursor: pointer;
+            position: relative;
+            &[data-id]:after{
+              opacity: 0; 
+              content: "посмотреть на карте";
+              position: absolute;
+              background: url(../img/ban-text1-bg.png) left top repeat;
+              bottom:0px;
+              right:-15px;
+              text-align: center;
+              color:#fff;
+              padding: 5px;
+              transition: all .5s ease; 
+            }
+            &:hover::after { 
+              opacity: 1;              
+            }
+            p{
+                font-size: 14px;
+                span{
+                    font-weight: bold;
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+} 
+
+

@@ -283,74 +283,148 @@ $(window).scroll(function(){
 
 /*Google Map*/
 
- // The following example creates complex markers to indicate beaches near
-  // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
-  // to the base of the flagpole.
   function initMap() {
-    var map = new google.maps.Map(document.getElementById('world-map'), {
-      zoom: 12,
-      center: {lat: 55.6340, lng: 37.4400}
+    var lnk = $('#world-map').data().json;
+    
+    function getJsonData(){
+        var data = $.ajax({
+            url: lnk,
+            async: false});
+        return $.parseJSON(data.responseText);
+    }  
+
+    var dataMap = getJsonData();
+
+    var mapContainer = document.getElementById('world-map')
+    if(!mapContainer) { // || mapContainer.childElementCount
+        return;
+    }
+    var map = new google.maps.Map(mapContainer, {
+      zoom: 10,
+      center: dataMap.coords,
     });
 
-    setMarkers(map);
+    setMarkers(map, dataMap.shops);
   }
 
-  // Data for the markers consisting of a name, a LatLng and a zIndex for the
-  // order in which these markers should display on top of each other.
-  var beaches = [
-    ['Мебель Park', 55.634027, 37.440074, 1],
-    /*['Coogee Beach', -33.923036, 151.259052, 5],
-    ['Cronulla Beach', -34.028249, 151.157507, 3],
-    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-    ['Maroubra Beach', -33.950198, 151.259302, 1]*/
-  ];
-
-  function setMarkers(map) {
-    // Adds markers to the map.
-
-    // Marker sizes are expressed as a Size of X,Y where the origin of the image
-    // (0,0) is located in the top left of the image.
-
-    // Origins, anchor positions and coordinates of the marker increase in the X
-    // direction to the right and in the Y direction down.
-    var image = {
-      url: '',
-      // This marker is 20 pixels wide by 32 pixels high.
-      size: new google.maps.Size(20, 32),
-      // The origin for this image is (0, 0).
-      origin: new google.maps.Point(0, 0),
-      // The anchor for this image is the base of the flagpole at (0, 32).
-      anchor: new google.maps.Point(0, 32)
+  function setMarkers(map, shops) {
+    var markers = [];
+    var symbol = {
+        path: 'M10,1.9c4.5,0,8.1,3.6,8.1,8.1c0,4.5-3.6,8.1-8.1,8.1c-4.5,0-8.1-3.6-8.1-8.1C1.9,5.5,5.5,1.9,10,1.9 M10,0 C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0z M10,6.8c-1.8,0-3.2,1.4-3.2,3.2s1.4,3.2,3.2,3.2s3.2-1.4,3.2-3.2 S11.8,6.8,10,6.8z',
+        strokeColor: '#124877',
+        fillColor: '#124877',
+        fillOpacity: 1,
+        anchor: new google.maps.Point(0, 20)
     };
-    // Shapes define the clickable region of the icon. The type defines an HTML
-    // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-    // The final coordinate closes the poly by connecting to the first coordinate.
-    var shape = {
-      coords: [1, 1, 1, 20, 18, 20, 18, 1],
-      type: 'poly'
-    };
-    var messages = ['<b>Магазин мебели  BEREZHNO</b><br> корпус А, 2 этаж помещение 239а'/*, 'is', 'the', 'secret', 'message'*/];
-    for (var i = 0; i < beaches.length; i++) {
-      var beach = beaches[i];
-      var marker = new google.maps.Marker({
-        position: {lat: beach[1], lng: beach[2]},
-        map: map,
-        //icon: image,
-        //animation: google.maps.Animation.DROP,
-        //shape: shape,
-        title: beach[0],
-        zIndex: beach[3]
-      });
-      attachMessage(marker,  messages[i]);
-    }
+        shops.forEach(function(shop) {
+            var contentString;
+            var optionString = [];
+            var shopsString = [];
+            var addressEl = '',
+                timeEl = '',
+                phoneEl = '',
+                shopsEl = '',
+                optionsEl = '';              
+
+
+            if (shop.address) {
+                addressEl = '<li class="map-popup__list-item"><span>Адрес:</span><span>'+shop.address+'</span></li>';
+            }
+
+            if (shop.phone) {
+                phoneEl = '<li class="map-popup__list-item"><span>Телефон:</span><span>'+shop.phone+'</span></li>';
+            }
+
+            if (shop.time) {
+                timeEl = '<li class="map-popup__list-item"><span>Время работы:</span><span>'+shop.time+'</span></li>';
+            }
+
+            if (shop.shops) {    
+                shop.shops.forEach(function(shops){
+                    var arr = $.map(shops, function(el) { return el });
+                    shopsString += '<li><a target="_blank" href="'+arr[1]+'""><span class="link--white">'+' - '+arr[0]+'</a></span></li>';
+                });                
+            }       
+            
+
+            contentString =
+               '<span class="map-popup__link"><span class="">'+shop.name+'</span></span>'+
+               '<ul class="map-popup__list">'+addressEl+phoneEl+timeEl+shopsString+'</ul>';
+
+            var marker = new google.maps.Marker({
+                position: shop.coords,
+                map: map,
+                icon: symbol,
+                title: shop.name
+            });
+
+            markers.push(marker);
+
+            var button = document.querySelector('[data-id="'+shop.id+'"]');
+
+            if (button) {
+
+                button.addEventListener('click', function() {
+                    google.maps.event.trigger(marker, 'click');
+
+                    var scrollY = marker.map.__gm.Z.offsetTop - 65; 
+
+                    $('html, body').animate({
+                        scrollTop: scrollY
+                    }, 500);
+                });
+            }
+            attachMessage(map, marker, contentString, markers);
+        });
+
+        centerMap(map, markers);
   }
+ 
+  var activeInfoWindow;
 
-  function attachMessage(marker, message) {
+  function attachMessage(map, marker, message, markers) {
+    
     var infowindow = new google.maps.InfoWindow({
       content: message
     });
 
-    marker.addListener('click', function() {
-      infowindow.open(marker.get('map'), marker);      
+    marker.addListener('click', function() { 
+
+      activeInfoWindow&&activeInfoWindow.close();
+
+      var latlng = new google.maps.LatLng(this.position.lat(), this.position.lng());
+
+      infowindow.open(marker.get('map'), marker);
+
+      activeInfoWindow = infowindow;
+
+      map.panTo(latlng);
+      map.panBy(0, -70);    
     });
+  }
+
+  function centerMap(map, markers) {
+    var markersBounds = new google.maps.LatLngBounds();
+
+    if (markers.length > 0) {
+        $.each(markers, function() {
+            var markerCoords = new google.maps.LatLng(this.position.lat(), this.position.lng());
+            markersBounds.extend(markerCoords);
+        });
+
+        if (markers.length > 1) {
+                map.fitBounds(markersBounds);
+                // map.panBy(0, 80);
+                // map.setZoom(map.getZoom() - 1);
+
+        } else {
+            map.panTo(markersBounds.getCenter());
+            map.setZoom(13);
+        }
+    } else {
+        if (map.center.lat() + map.center.lng() === 0) {
+            map.setCenter(new google.maps.LatLng(58.6555915313906, 43.27900886535656));
+            map.setZoom(5);
+        }
+    }
   }
