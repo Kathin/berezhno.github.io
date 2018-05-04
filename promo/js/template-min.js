@@ -367,8 +367,7 @@ $(window).scroll(function(){
                 button.addEventListener('click', function() {
                     google.maps.event.trigger(marker, 'click');
 
-                    var scrollY = marker.map.__gm.Z.offsetTop - 65; 
-
+                    var scrollY = marker.map.__gm.$.offsetTop - 65; 
                     $('html, body').animate({
                         scrollTop: scrollY
                     }, 500);

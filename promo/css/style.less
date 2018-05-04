@@ -9197,12 +9197,20 @@ main .item-page .shops{
             }
 
         }
+        &[data-id]{
+            cursor: pointer;
+            &:hover { 
+                .shops__item-list:after{
+                    opacity: 1;
+                }
+            }
+        }        
         &-list{
             height: 200px; 
             padding: 10px 0;
             cursor: pointer;
             position: relative;
-            &[data-id]:after{
+            &:after{
               opacity: 0; 
               content: "посмотреть на карте";
               position: absolute;
@@ -9213,9 +9221,6 @@ main .item-page .shops{
               color:#fff;
               padding: 5px;
               transition: all .5s ease; 
-            }
-            &:hover::after { 
-              opacity: 1;              
             }
             p{
                 font-size: 14px;
